@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <ScrollView
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/sourceLanguageEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/item_edt"
+                android:gravity="start"
+                android:hint="Enter English"
+                android:minHeight="100dp"
+                android:padding="10dp"
+                android:text=""
+                android:textSize="18sp">
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/destinationLanguageTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textSize="18sp"
+
+                >
+
+            </TextView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Translator"
+        android:textColor="#0C0C0C"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/translatorBtn"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/logo"
+        android:text="@string/app_name"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/translatorBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/sourceLanguageChooseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:backgroundTint="#8B9CF6"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="English"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:cornerRadius="10dp">
+
+        </Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/test"
+            android:textColor="#7A34F6"
+            android:textSize="32dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/destinationLanguageChooseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:backgroundTint="#8B9CF6"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Rus"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:cornerRadius="10dp">
+
+        </Button>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
